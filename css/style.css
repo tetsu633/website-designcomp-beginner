@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/* -----------------------------------
+    共通設定
+----------------------------------- */
+body {
+    font-family: Noto Sans JP Regular;
+}
+
+.cf::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* SP設定用 */
+/* -----------------------------------
+    ヘッダー
+----------------------------------- */
+header {
+    width: 100%;
+    height: 360px;
+    background: url(../img/main-header_sp.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.top {
+    height: 48px;
+    display: flex;
+    align-items: center; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 15px;
+}
+
+header div.top h1 img {
+    width: 100%;
+    max-width: 110px;
+    height: auto;
+}
+
+header h2 {
+    font-size: 48px;
+    font-family: EB Garamond;
+    color: #C32D4D;
+    line-height: calc(62 / 48);
+}
+
+header h2 span {
+    font-size: 15px;
+    font-family: Noto Sans JP Regular;
+    color: #333333;
+    display: block;
+    text-align: center;
+}
+
+/* -----------------------------------
+    ハンバーガーメニュー
+----------------------------------- */
+header div.hamburger_menu {
+    width: 48px;
+    height: 48px;
+    background-color: #C32D4D;
+    border-radius: 0 0 0 8px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+header div.hamburger_menu span,
+header div.hamburger_menu span::before,
+header div.hamburger_menu span::after {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    display: block;
+}
+
+header div.hamburger_menu span::before {
+    bottom: 8px;
+    transition: 1s;
+}
+
+header div.hamburger_menu span::after {
+    top: 8px;
+    transition: 1s;
+}
+
+header div.hamburger_menu span.active {
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 1s;
+}
+
+header div.hamburger_menu span.active::before {
+    transform: rotate(-45deg);
+    bottom: 0;
+    transition: transform 2s;
+}
+
+header div.hamburger_menu span.active::after {
+    transform: rotate(45deg);
+    top: 0;
+    transition: transform 2s;
+}
+
+.modal {
+    background-color: #C32D4D;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.modal nav ul {
+    text-align: center;
+}
+
+.modal nav ul li {
+    line-height: calc(58 / 24);
+}
+
+.modal nav ul li a {
+    font-size: 24px;
+    font-family: EB Garamond;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* -----------------------------------
+    メイン
+----------------------------------- */
+div.main_wrapper {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+main div.description p {
+    font-size: 15px;
+    line-height: calc(27 / 15);
+}
+
+main div.description div.link {
+    margin-top: 22px;
+}
+
+main div.description div.link ul {
+    display: flex;
+    justify-content: left;
+}
+
+main div.description div.link ul li:last-child {
+    margin-left: 20px;
+}
+
+main div.description div.link ul li a {
+    font-size: 16px;
+    font-family: Cormorant Garamond;
+    color: #C32D4D;
+    text-decoration: underline;
+}
+
+main div.description div.profile {
+    margin-top: 34px;
+}
+
+main div.description div.profile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+main div.description div.profile p {
+    font-size: 14px;
+    line-height: calc(25.2 / 14);
+}
+
+main div.concept {
+    margin-top: 26px;
+}
+
+main div.concept img {
+    width: 100%;
+    height: auto;
+}
+
+/* -----------------------------------
+    フッダー
+----------------------------------- */
+footer {
+    width: 100%;
+    height: 137px;
+    background-color: #C32D4D;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin-left: 30px;
+}
+
+footer nav ul li a {
+    font-size: 16px;
+    font-family: EB Garamond;
+    color: #fff;
+}
+
+footer nav ul li:first-child {
+    margin-left: 0;
+}
+
+footer p {
+    font-size: 12px;
+    font-family: EB Garamond;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* PC設定用 */
+@media (min-width: 600px) {
+    /* -----------------------------------
+        ヘッダー
+    ----------------------------------- */
+    body {
+        background-color: red;
+    }
+}
