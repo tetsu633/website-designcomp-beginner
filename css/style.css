@@ -44,6 +44,10 @@ header div.top h1 img {
     height: auto;
 }
 
+header div.top nav {
+    display: none;
+}
+
 header h2 {
     font-size: 48px;
     font-family: EB Garamond;
@@ -206,13 +210,18 @@ main div.description div.profile p {
     line-height: calc(25.2 / 14);
 }
 
-main div.concept {
+main div.concept_image {
     margin-top: 26px;
 }
 
-main div.concept img {
+main div.concept_image img.sp {
     width: 100%;
     height: auto;
+    display: block;
+}
+
+main div.concept_image img.pc {
+    display: none;
 }
 
 /* -----------------------------------
@@ -260,7 +269,98 @@ footer p {
     /* -----------------------------------
         ヘッダー
     ----------------------------------- */
-    body {
-        background-color: red;
+    header div.hamburger_menu {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        height: 680px;
+        background: url(../img/main-header_sp.png) no-repeat center;
+        background-size: cover;
+    }
+
+    header div.top {
+        left: 0;
+        margin: 0 30px;
+        justify-content: space-between;
+    }
+
+    header div.top nav {
+        display: block;
+    }
+
+    header div.top nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    header div.top nav ul li {
+        margin-left: 30px;
+    }
+    
+    header div.top nav ul li a {
+        font-size: 20px;
+        font-family: EB Garamond;
+    }
+
+    header h2 {
+        font-size: 88px;
+    }
+    
+    header h2 span {
+        font-size: 18px;
+    }
+
+    /* -----------------------------------
+        メイン
+    ----------------------------------- */
+    div.main_wrapper {
+        padding: 0 165px;
+        margin-top: 70px;
+    }
+    
+    main div.description {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main div.description p {
+        font-size: 16px;
+        line-height: calc(28 / 16);
+    }
+
+    main div.concept_content {
+        width: 100%;
+        max-width: 555px;
+        height: auto;
+    }
+
+    main div.concept_image {
+        margin: 0 0 0 50px;
+    }
+
+    main div.concept_image img.pc {
+        display: block;
+        width: 100%;
+        max-width: 505px;
+        height: auto;
+    }
+
+    main div.concept_image img.sp {
+        display: none;
+    }
+
+    /* -----------------------------------
+        フッダー
+    ----------------------------------- */
+    footer {
+        height: 167px;
+        margin-top: 70px;
+    }
+
+    footer nav ul li a {
+        font-size: 20px;
     }
 }
